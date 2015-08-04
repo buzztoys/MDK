@@ -23,6 +23,9 @@
 	<classpathentry kind="lib" path="lib/org.eclipse.uml2.uml_5.1.0.v20150601-0733.jar"/>
 	<classpathentry kind="lib" path="lib/org.eclipse.ocl_3.5.0.v20150521-1211.jar"/>
 	<classpathentry kind="lib" path="lib/org.eclipse.ocl.ecore_3.5.0.v20150525-1635.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.ocl.common_1.3.0.v20150519-0914.jar"/>
+	<classpathentry kind="lib" path="lib/org.eclipse.ocl.common.ui_1.2.0.v20150519-0914.jar"/>
+	<classpathentry kind="lib" path="lib/lpg-java-runtime-bin-2.0.23.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="lib/opencsv-2.3.jar"/>
 	<classpathentry kind="lib" path="lib/tomcat-embed-core-7.0.16.jar"/>

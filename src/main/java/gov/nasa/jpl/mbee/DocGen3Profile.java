@@ -73,6 +73,7 @@ public class DocGen3Profile {
     public static final String javaExtensionStereotype               = "JavaExtension";
 
     public static final String collectionStereotype                  = "CollectionAndFilterGroup";
+    public static final String documentProfileName					 = "Document Profile";
     public static final String documentMetaStereotype                = "DocumentMeta";
     public static final String documentViewStereotype                = "Product";
     public static final String accountableForStereotype              = "accountableFor";
