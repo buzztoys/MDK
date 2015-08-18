@@ -84,6 +84,10 @@ public class DocBookOutputVisitor extends AbstractModelVisitor {
         book.setDocushareLink(doc.getDocushareLink());
         book.setAbbreviatedTitle(doc.getAbbreviatedTitle());
         book.setTitlePageLegalNotice(doc.getTitlePageLegalNotice());
+        book.setInstLogo(doc.getInstLogo());
+        book.setInstLogoSize(doc.getInstLogoSize());
+        book.setInstTxt1(doc.getInstTxt1());
+        book.setInstTxt2(doc.getInstTxt2());
         book.setFooterLegalNotice(doc.getFooterLegalNotice());
         book.setCollaboratorEmail(doc.getCollaboratorEmail());
         book.setRemoveBlankPages(doc.getRemoveBlankPages());

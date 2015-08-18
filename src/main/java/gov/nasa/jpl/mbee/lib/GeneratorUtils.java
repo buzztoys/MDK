@@ -48,6 +48,7 @@ import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Property;
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.Type;
 import com.nomagic.uml2.ext.magicdraw.classes.mdkernel.TypedElement;
 import com.nomagic.uml2.ext.magicdraw.commonbehaviors.mdbasicbehaviors.Behavior;
+import com.nomagic.uml2.ext.magicdraw.mdprofiles.Profile;
 import com.nomagic.uml2.ext.magicdraw.mdprofiles.Stereotype;
 
 public class GeneratorUtils {
@@ -128,8 +129,9 @@ public class GeneratorUtils {
     }
 
     public static void docMetadata(Document doc, Element start) {
+    	Profile documentProfile = StereotypesHelper.getProfile(Application.getInstance().getProject(),DocGen3Profile.documentProfileName);
         Stereotype documentView = StereotypesHelper.getStereotype(Application.getInstance().getProject(),
-                DocGen3Profile.documentViewStereotype, "Document Profile");
+                DocGen3Profile.documentViewStereotype, documentProfile);
         // documentMeta Backwards Compatibility
         String title = (String)StereotypesHelper.getStereotypePropertyFirst(start,
                 DocGen3Profile.documentMetaStereotype, "title");
@@ -235,7 +237,7 @@ public class GeneratorUtils {
         }
 
         // Institutional Logo setup
-        String instLogo = (String)StereotypesHelper.getStereotypePropertyFirst(start, documentView,
+        String InstLogo = (String)StereotypesHelper.getStereotypePropertyFirst(start, documentView,
                 "InstLogo");
         String instLogoSize = (String)StereotypesHelper.getStereotypePropertyFirst(start, documentView,
                 "InstLogoSize");
@@ -243,6 +245,15 @@ public class GeneratorUtils {
                 "Insttxt1");
         String instTxt2 = (String)StereotypesHelper.getStereotypePropertyFirst(start, documentView,
                 "Insttxt2");
+        
+        if (InstLogo == null || InstLogo.equals("")) {
+            Property propertyByName = StereotypesHelper.getPropertyByName(documentView,
+                    "InstLogo");
+            if (propertyByName != null) {
+                InstLogo = UML2ModelUtil.getDefault(propertyByName);
+            }
+
+        }
 
         // Collect author information
         List<String> Author = StereotypesHelper.getStereotypePropertyValueAsString(start, documentView,
@@ -380,7 +391,7 @@ public class GeneratorUtils {
         doc.setRevisionHistory(RevisionHistory);
         doc.setUseDefaultStylesheet(UseDefaultStylesheet);
         doc.setLogoSize(LogoSize);
-        doc.setInstLogo(instLogo);
+        doc.setInstLogo(InstLogo);
         doc.setInstLogoSize(instLogoSize);
         doc.setInstTxt1(instTxt1);
         doc.setInstTxt2(instTxt2);
