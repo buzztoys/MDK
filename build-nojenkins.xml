@@ -9,7 +9,7 @@
   <!-- set global properties for this build -->
   <!-- <property name="md" location="${mdpath}"/> -->
   <!-- Conditional properties to load based on whether or not this is being called from jenkins build -->
-  <condition property="md" value="${md.install.dir}" else="/Applications/MagicDraw UML 18.0">
+  <condition property="md" value="${md.install.dir}" else="/Applications/MagicDraw/Development/MD18.0">
 	<isset property="plugin.dir"/>
   </condition>
 
@@ -61,12 +61,6 @@
     <fileset dir="${md}/plugins/com.nomagic.magicdraw.diagramtable" includes="**/*.jar">
          
         </fileset>
-  	<fileset dir="${md}/plugins/gov.nasa.jpl.magicdraw.qvto.library" includes="**/*.jar">
-  	          
-  	        </fileset>
-  	<fileset dir="${md}/plugins/com.nomagic.magicdraw.qvt" includes="**/*.jar">
-  	  	          
-  	  	        </fileset>
     <pathelement path="${build.plugin.classes}"/>
   </path>
 
@@ -187,7 +181,7 @@
   	<copy todir="${build.zipfile}/plugins/gov.nasa.jpl.mbee.docgen" file="${src.plugin.xml}" filtering="true" overwrite="true"/>
   	<copy todir="${build.zipfile}/data/resourcemanager" file="${src.descriptor}" filtering="true"/>
   	
-  	<exec executable="${python-exe}">
+  	<exec executable="python">
   	      <arg value="resource_descriptor_generator.py"/>
   	</exec>
   	

@@ -120,6 +120,7 @@
 	<file from="plugins/gov.nasa.jpl.mbee.docgen/lib/commons-lang-2.6.jar" to="plugins/gov.nasa.jpl.mbee.docgen/lib/commons-lang-2.6.jar"/>
 	<file from="plugins/gov.nasa.jpl.mbee.docgen/lib/ecj-3.7.2.jar" to="plugins/gov.nasa.jpl.mbee.docgen/lib/ecj-3.7.2.jar"/>
 	<file from="plugins/gov.nasa.jpl.mbee.docgen/lib/jgrapht-0.8.3-jdk1.6.jar" to="plugins/gov.nasa.jpl.mbee.docgen/lib/jgrapht-0.8.3-jdk1.6.jar"/>
+	<file from="plugins/gov.nasa.jpl.mbee.docgen/lib/joda-time-2.8.jar" to="plugins/gov.nasa.jpl.mbee.docgen/lib/joda-time-2.8.jar"/>
 	<file from="plugins/gov.nasa.jpl.mbee.docgen/lib/json_simple-1.1.jar" to="plugins/gov.nasa.jpl.mbee.docgen/lib/json_simple-1.1.jar"/>
 	<file from="plugins/gov.nasa.jpl.mbee.docgen/lib/jsoup-1.6.1.jar" to="plugins/gov.nasa.jpl.mbee.docgen/lib/jsoup-1.6.1.jar"/>
 	<file from="plugins/gov.nasa.jpl.mbee.docgen/lib/lpg-java-runtime-bin-2.0.23.jar" to="plugins/gov.nasa.jpl.mbee.docgen/lib/lpg-java-runtime-bin-2.0.23.jar"/>
