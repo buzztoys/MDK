@@ -1,6 +1,6 @@
 #MDK README
-If you are building from source in eclipse we highly recommend the following plugin to handle your MagicDraw .classpath dependencies:
 
-https://github.com/nomagic-com/com.nomagic.magicdraw.classpath
+Version: 4.4.4x 
+Code is in
+https://github.com/miyakowilson/MDK/tree/feature/magicdraw594-docgen2pdf
 
-Follow the README.md for usage instructions
